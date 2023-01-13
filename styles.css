@@ -9,12 +9,16 @@
   --bg-color: #f5f8ff;
   --text-color: #141c2f;
   --switch-bg-url: url(./assets/moon.svg);
+  --shadow-color: #d3dbee;
+  --box-bg-color: #ffffff;
 }
 
 .dark {
-  --bg-color: #141C2F;
+  --bg-color: #141c2f;
   --text-color: #ffffff;
   --switch-bg-url: url(./assets/sun.svg);
+  --shadow-color: transparent;
+  --box-bg-color: #1f2a48;
 }
 
 /* GENERAL */
@@ -88,6 +92,7 @@ form input {
   padding: 15px;
   flex: auto;
   outline: none;
+  background: transparent;
 }
 
 form button {
@@ -100,12 +105,14 @@ form button {
   color: #ffffff;
   text-transform: uppercase;
   padding: 15px;
+
+  cursor: pointer;
 }
 
 /* BOX */
 .box {
-  background: #ffffff;
-  box-shadow: 0px 6px 10px #d3dbee;
+  background: var(--box-bg-color);
+  box-shadow: 0px 6px 10px var(--shadow-color);
   border-radius: 5px;
   padding: 10px;
 }
@@ -132,14 +139,18 @@ form button {
   font-size: 1.5rem;
 }
 
-.success {
+#success {
   background-color: #25cc16;
   color: #ffffff;
 }
 
-.error {
+#error {
   background-color: #e93d5c;
   color: #ffffff;
+}
+
+.hide {
+  display: none;
 }
 
 /* RESULT */

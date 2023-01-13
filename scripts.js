@@ -20,19 +20,20 @@ function toggleMode() {
 
   // substituir a imagem
   if (html.classList.contains("dark")) {
-    // se tiver dark mode, adicionar a imagem dark
+    // se tiver dark mode, adicionar a imagem clara
     switchText.innerHTML = "LIGHT"
-    logo.setAttribute('src', './images/logo-light.png')
+    logo.setAttribute('src', './assets/logo_light.svg')
   } else {
     // set tiver sem light mode, manter a imagem normal
     switchText.innerHTML = "DARK"
-    logo.setAttribute('src', './images/logo.png')
+    logo.setAttribute('src', './assets/logo.svg')
   }
 }
 
-const form = document.querySelector("form");
 
-form.addEventListener("submit", function (event) {
+const form = document.querySelector("form")
+
+form.addEventListener("submit", event => {
   event.preventDefault()
 
   const longUrl = document.querySelector("input[name=long_url]");
@@ -42,10 +43,26 @@ form.addEventListener("submit", function (event) {
     return response.json()
   })
   .then(data => {
-    console.log(data)
+    const successMessage = document.getElementById("success")
+    const errorMessage = document.getElementById("error")
+
+    const shortUrl = document.querySelector("#result #info h1")
+    const originalUrl = document.querySelector("#result #info p")
+
+    if (data.ok) {
+      successMessage.classList.add('hide')
+
+      originalUrl.innerHTML = data.result.original_link
+      shortUrl.innerHTML = data.result.full_short_link
+    } else {
+      errorMessage.classList.add('hide')
+
+      originalUrl.innerHTML = ""
+      shortUrl.innerHTML = ""
+    }
   })
   .catch(error => {
-    console.log(error)
+    console.error(error)
   })
 })
 
