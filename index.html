@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>curto.link</title>
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <img src="./assets/logo.svg" alt="Logo do CurtoLinks" />
+
+      <button id="switch" onclick="toggleMode()">
+        <span>DARK</span>
+        <i></i>
+      </button>
+    </header>
+
+    <form class="box">
+      <i class="ph-link-fill"></i>
+      <input type="url" placeholder="http://minha_url_longa.com.br" />
+      <button>
+        Gerar Link
+      </button>
+    </form>
+
+    <section class="box">
+      <div class="wrapper">
+        <!-- <div class="message success">
+          <i class="ph-check-circle-bold"></i>
+          <span>Nova url gerada com sucesso!</span>
+        </div>
+
+        <div class="message error">
+          <i class="ph-warning-circle-bold"></i>
+          <span>Houve um erro ao gerar uma nova URL!</span>
+        </div> -->
+
+        <div id="result">
+          <div id="info">
+            <h1>https://shrtco.de/KCveN</h1>
+            <p>http://example.org/very/long/link.html</p>
+          </div>
+
+          <div id="share">
+            <strong>Compartilhar link:</strong>
+            <div id="links">
+              <i class="ph-whatsapp-logo-bold"></i>
+              <i class="ph-facebook-logo-bold"></i>
+              <i class="ph-twitter-logo-bold"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="./scripts.js"></script>
+</body>
+
+</html>

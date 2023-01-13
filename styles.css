@@ -1,0 +1,168 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #f5f8ff;
+  --text-color: #141c2f;
+  --switch-bg-url: url(./assets/moon.svg);
+}
+
+.dark {
+  --bg-color: #141C2F;
+  --text-color: #ffffff;
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+/* GENERAL */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 250ms linear;
+}
+
+/* 1rem = 16px */
+body * {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #afb7cb;
+}
+
+/* CONTAINER */
+#container {
+  width: 600px;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* SWITCH */
+#switch {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+#switch span {
+  font-size: 12px;
+  color: #afb7cb;
+}
+
+#switch i {
+  padding: 18px;
+  background: transparent var(--switch-bg-url) no-repeat center;
+}
+
+/* FORM */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+form i {
+  font-size: 2.5rem;
+  color: #0079fe;
+}
+
+form input {
+  border: none;
+  padding: 15px;
+  flex: auto;
+  outline: none;
+}
+
+form button {
+  border: none;
+  background: #0079fe;
+  border-radius: 5px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+/* BOX */
+.box {
+  background: #ffffff;
+  box-shadow: 0px 6px 10px #d3dbee;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.wrapper {
+  padding: 15px;
+}
+
+/* MESSAGES */
+.message {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+
+  font-size: 0.8rem;
+  font-weight: normal;
+
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.message i {
+  font-size: 1.5rem;
+}
+
+.success {
+  background-color: #25cc16;
+  color: #ffffff;
+}
+
+.error {
+  background-color: #e93d5c;
+  color: #ffffff;
+}
+
+/* RESULT */
+#result {
+  display: flex;
+  justify-content: space-between;
+}
+
+#result #info h1 {
+  font-size: 2rem;
+}
+
+#result #info p {
+  color: #afb7cb;
+}
+
+/* SHARE */
+#share strong {
+  font-size: 0.75rem;
+  color: #0079fe;
+}
+
+#share #links i {
+  font-size: 2rem;
+  color: #afb7cb;
+}
